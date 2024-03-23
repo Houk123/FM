@@ -1,21 +1,27 @@
 import React, {Component} from "react";
 import {Switch, Route} from "react-router-dom";
-import Home from "./scenes/Home";
+import Message from "./scenes/Message";
 import User from "./scenes/User";
-import About from "./scenes/About";
+import Friends from "./scenes/Friends";
+import Music from "./scenes/Music";
+import Setting from "./scenes/Setting";
 import Contact from "./scenes/Contact";
+import About from "./scenes/About";
 
 class MainWindow extends Component{
     render(){
         const availablScenes = [
-            {path: '/about', component: <About />},
-            {path: '/contact', component: <Contact />},
             {path: '/user', component: <User />},
-            {path: '/', component: <Home />},
+            {path: '/message', component: <Message />},
+            {path: '/friends', component: <Friends />},
+            {path: '/music', component: <Music />},
+            {path: '/setting', component: <Setting />},
+            {path: '/contact', component: <Contact />},
+            {path: '/about', component: <About />},
         ]
 
         return(
-            <div class="mainWindow">
+            <div class="container">
                 <Switch>
                     {availablScenes.map((scene) => (
                         <Route key={scene.path} path={scene.path}>

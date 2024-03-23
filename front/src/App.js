@@ -10,15 +10,9 @@ function App() {
   return (
     <Router>
       <div>
-        <div class="Header">
         <Header />
-        </div>
-        <div class="container">
-          <div class="main-box">
-          <Route path="/" component={MainWindow} />
-          </div>
-          <Footer />
-        </div>
+        <Route path="/" component={MainWindow} />
+        <Footer />
       </div>
     </Router>
   );
