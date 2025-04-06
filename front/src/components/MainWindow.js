@@ -9,8 +9,9 @@ import Contact from "./scenes/Contact";
 import About from "./scenes/About";
 
 class MainWindow extends Component{
-    render(){
-        const availablScenes = [
+    constructor(props) {
+        super(props);
+        this.availablScenes = [
             {path: '/user', component: <User />},
             {path: '/message', component: <Message />},
             {path: '/friends', component: <Friends />},
@@ -19,17 +20,23 @@ class MainWindow extends Component{
             {path: '/contact', component: <Contact />},
             {path: '/about', component: <About />},
         ]
-
+    
+    }
+    
+    render(){
+        console.log(this.state.date);
+        
         return(
-            <div class="container">
+            <main className="container main">
                 <Switch>
-                    {availablScenes.map((scene) => (
+                    <h1>{}</h1>
+                    {this.availablScenes.map((scene) => (
                         <Route key={scene.path} path={scene.path}>
                             {scene.component}    
                         </Route>
                     ))}
                 </Switch>
-            </div>
+            </main>
         )
     }
 }
