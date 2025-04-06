@@ -9,7 +9,7 @@ import "./App.css";
 function App() {
   return (
     <Router>
-      <div>
+      <div className="main-box">
         <Header />
         <Route path="/" component={MainWindow} />
         <Footer />

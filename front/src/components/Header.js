@@ -8,20 +8,20 @@ import Icon_2 from "../icons/12.jpg";
 class Header extends Component {
     render() {
         const headerLinks = [
-            {to: '/user', div: <div class="centered-icon">
+            {to: '/user', div: <div className="centered-icon">
                                     <img src={Icon} alt="Icon"></img>
                                     <h1>FM</h1>
                                 </div>},
-            {to: '/music', div: <div class="header-box">
+            {to: '/music', div: <div className="box-header__link">
                                     <img src={Icon_2} alt="Icon"></img>
                                     <h1>Музыка</h1>
                                     <MusicWidget />
                                 </div>},                            
-            {to: '/setting', div: <div className="header-box">
+            {to: '/setting', div: <div className="box-header__link">
                                     <img src={Icon_1} alt="Icon"></img>
                                     <h1>Настройки</h1>
                                 </div>},
-            {to: '/exit', div: <div class="header-box">
+            {to: '/exit', div: <div className="box-header__link">
                                         <img src={Icon_2} alt="Icon"></img>
                                         <h1>Выйти</h1>
                                     </div>}
@@ -29,9 +29,9 @@ class Header extends Component {
 
         return(
             <header>
-                <div class="header">
+                <div className="header">
                     {headerLinks.map((link, index) =>(
-                        <div key={`link_${index}`} class="box-header">
+                        <div key={`link_${index}`} className="box-header">
                             <Link to={link.to}>
                                 {link.div}
                             </Link>

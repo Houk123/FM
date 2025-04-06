@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 class Footer extends Component{
     render(){
         return(
-            <footer class="footer">
+            <footer className="footer">
                 <div>
                     <h3>
                         <Link to="/contact">Контакт</Link>
