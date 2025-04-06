@@ -23,9 +23,7 @@ class MainWindow extends Component{
     
     }
     
-    render(){
-        console.log(this.state.date);
-        
+    render(){        
         return(
             <main className="container main">
                 <Switch>
